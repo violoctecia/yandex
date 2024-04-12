@@ -29,7 +29,7 @@ header .logo_wrapper .logo_text h1 {
 }
 
 .main {
-  background: url("/images/main-bg.png");
+  background: url("./images/main-bg.png");
   background-position: center top;
   padding-bottom: 118px;
   position: relative;
