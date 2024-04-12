@@ -29,7 +29,7 @@ header .logo_wrapper .logo_text h1 {
 }
 
 .main {
-  background: url("./images/main-bg.png");
+  background: url("../images/main-bg.png");
   background-position: center top;
   padding-bottom: 118px;
   position: relative;
@@ -110,7 +110,7 @@ header .logo_wrapper .logo_text h1 {
 }
 @media (max-width: 699px) {
   .main {
-    background: url("/images/main-bg-mob.jpg");
+    background: url("../images/main-bg-mob.jpg");
     background-position: right bottom;
     height: 90vh;
   }
