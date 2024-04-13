@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .container {
   max-width: 1222px;
   margin: 0 auto;
@@ -16,15 +17,16 @@ header {
 }
 header .logo_wrapper {
   display: flex;
-  align-items: center;
   gap: 6.35px;
+}
+header .logo_wrapper .logo_img {
+  display: flex;
 }
 header .logo_wrapper .logo_text h1 {
   font-family: "Golos+Text", sans-serif;
   color: #595653;
   font-weight: 700;
   font-size: 16px;
-  line-height: 108%;
   text-transform: uppercase;
 }
 
@@ -71,6 +73,7 @@ header .logo_wrapper .logo_text h1 {
   padding: 20px 49px;
   width: calc(50% - 10px);
   border-radius: 66px;
+  border: none;
   background: #1f1f1f;
   color: white;
   cursor: pointer;
@@ -109,10 +112,21 @@ header .logo_wrapper .logo_text h1 {
   }
 }
 @media (max-width: 699px) {
+  header .logo_wrapper {
+    gap: 5.5px;
+  }
+  header .logo_wrapper .logo_text h1 {
+    font-size: 14.42px;
+  }
+  header .logo_wrapper .logo_img svg {
+    height: 27px;
+  }
   .main {
     background: url("/images/main-bg-mob.jpg");
     background-position: right bottom;
-    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 88vh;
   }
   .main .main_content .main_buttons button {
     padding: 18px 37px;
@@ -124,6 +138,7 @@ header .logo_wrapper .logo_text h1 {
     font-weight: 600;
     font-size: 16px;
     max-width: 380px;
+    border: none;
   }
   .main .main_content .main_buttons {
     flex-direction: column;
@@ -155,5 +170,46 @@ header .logo_wrapper .logo_text h1 {
   }
   header {
     margin-bottom: 40px;
+  }
+}
+.running_line {
+  background: #F54932;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.running_line_wrapper {
+  display: flex; /* Для корректного расчета ширины контейнера */
+  text-wrap: nowrap; /* Запрет переноса строк */
+  animation: marquee 13s linear infinite;
+  gap: 12px;
+}
+.running_line_wrapper p {
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+}
+
+.dot {
+  color: white; /* Устанавливаем белый цвет */
+  margin-left: 5px; /* Добавляем немного отступа с левой стороны */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (max-width: 699px) {
+  .running_line {
+    height: 38px;
+  }
+  .running_line_wrapper p {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=main.css.map */
