@@ -39,7 +39,7 @@ header {
 }
 
 .main {
-  background: url("/images/main-bg.png");
+  background: url("../images/main-bg.png");
   background-position: center top;
   padding-bottom: 118px;
   position: relative;
@@ -135,7 +135,7 @@ header {
     height: 27px;
   }
   .main {
-    background: url("/images/main-bg-mob.jpg");
+    background: url("../images/main-bg-mob.jpg");
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -235,8 +235,6 @@ header {
   .support_wrapper {
     display: flex;
     align-items: center;
-    img {
-    }
 
     h1 {
       font-size: 36px;
@@ -510,12 +508,12 @@ header {
     }
   }
 }
-.carousel_img {
+.carousel_img.mob {
   position: absolute;
-  right: -35px;
+  right: -75px;
   bottom: 10px;
 }
-.carousel_img:last-child {
+.carousel_img {
   position: absolute;
   right: -55px;
   bottom: 65px;
@@ -526,10 +524,10 @@ header {
 }
 
 @media (max-width: 1355px) {
-  .carousel_img {
+  .carousel_img.mob {
     display: none;
   }
-  .carousel_img:last-child {
+  .carousel_img {
     display: none;
   }
 }
@@ -651,27 +649,203 @@ header {
     align-items: center;
     gap: 15px;
   }
-  .arrow-right {
-    background: #313131;
-    width: 36px;
-    height: 36px;
-    border-radius: 66px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .arrow-left {
-    background: #313131;
-    opacity: 20%;
-    width: 36px;
-    height: 36px;
-    border-radius: 66px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   #bottom {
     display: flex;
     column-gap: 6px;
+  }
+}
+
+.participants {
+  padding-top: 200px;
+  margin-bottom: 140px;
+  .participants_wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    h1 {
+      font-size: 54px;
+      line-height: 120%;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+
+    #slider-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #frame {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    #top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    #sliderr {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      transition: transform 0.5s ease;
+      justify-content: space-between;
+    }
+
+    .slidee {
+      flex: 0 0 33.33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .slidee:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .slidee .card {
+    background: url(../images/participants-img.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-family: "Golos+Text", sans-serif;
+      color: $primary-color;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 5px;
+      line-height: 120%;
+    }
+    p {
+      font-family: "Golos+Text", sans-serif;
+      color: $primary-color;
+      font-size: 20px;
+      text-align: center;
+      line-height: 120%;
+      opacity: 60%;
+      margin-bottom: 20px;
+    }
+
+    a {
+      border: 1px solid #3057a2;
+      border-radius: 62px;
+      background: none;
+      padding: 12px;
+      font-family: "Golos+Text", sans-serif;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 120%;
+      color: #3057a2;
+    }
+    a:hover {
+      background: #3057a2;
+      color: #ffffff;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    right: 0;
+    top: 14px;
+  }
+
+  #bottomm {
+    font-size: 16px;
+    font-family: "Golos+Text", sans-serif;
+    color: $primary-color;
+  }
+  #bottomm span {
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "Golos+Text", sans-serif;
+    color: $primary-color;
+  }
+}
+.arrow {
+  background: #313131;
+  width: 36px;
+  height: 36px;
+  border-radius: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow:hover {
+  background: #fbce51;
+}
+.arrow.disabled {
+  background: #d6d6d6;
+  pointer-events: none;
+}
+
+@media (max-width: 1150px) {
+  .participants .slidee .card {
+    background: url(../images/participants-img.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 244px;
+
+    padding-top: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 950px) {
+  .participants .participants_wrapper .slidee {
+    flex: 0 0 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .participants .pagination {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: -40px;
+    top: auto;
+  }
+}
+@media (max-width: 855px) {
+  .participants {
+    padding-top: 120px;
+    margin-bottom: 130px;
+  }
+  .participants .participants_wrapper h1 {
+    font-size: 36px;
+  }
+}
+
+footer {
+  background: #e9ded4;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  p {
+    font-family: "Golos+Text", sans-serif;
+    color: $primary-color;
+    font-size: 16px;
+    line-height: 120%;
+    opacity: 60%;
   }
 }

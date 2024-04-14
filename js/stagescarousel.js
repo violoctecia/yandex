@@ -41,12 +41,27 @@ function changeSlide(slideIndex) {
     showSlide();
 }
 
+function updateArrows() {
+    if (currentSlideIndex === 0) {
+        arrowLeft.classList.add("disabled");
+    } else {
+        arrowLeft.classList.remove("disabled");
+    }
+
+    if (currentSlideIndex === slides.length - 1) {
+        arrowRight.classList.add("disabled");
+    } else {
+        arrowRight.classList.remove("disabled");
+    }
+}
+
 function nextSlide() {
     let newSlideIndex = currentSlideIndex + 1;
     if (newSlideIndex > slides.length - 1) {
         newSlideIndex = 0;
     }
     changeSlide(newSlideIndex);
+    updateArrows();
 }
 
 function previousSlide() {
@@ -55,7 +70,10 @@ function previousSlide() {
         newSlideIndex = slides.length - 1;
     }
     changeSlide(newSlideIndex);
+    updateArrows();
 }
+
+updateArrows(); 
 
 addPagination();
 arrowLeft.addEventListener("click", previousSlide);

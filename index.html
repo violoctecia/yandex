@@ -52,8 +52,8 @@
                 </div>
                 <p>Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
                 <div class="main_buttons">
-                    <button>Поддержать шахматную мысль</button>
-                    <button>Подробнее о турнире</button>
+                    <button onclick="scrollToSection('section1')">Поддержать шахматную мысль</button>
+                    <button onclick="scrollToSection('section2')">Подробнее о турнире</button>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
         </div>
     </section>
 
-    <section class="support">
+    <section id="section1" class="support">
         <div class="container">
             <div class="support_wrapper">
                 <h1>Чтобы поддержать <br>Международный васюкинский турнир <span></span>
@@ -77,7 +77,7 @@
         </div>
     </section>
 
-    <section class="info">
+    <section id="section2" class="info">
         <div class="container">
             <div class="info_wrapper">
                 <img src="images/info-img.jpg" alt="info-img">
@@ -198,12 +198,13 @@
                                         </div>
                                     </div>
                                 </div>
-                        
+
                                 <div class="slide">
                                     <div class="card">
                                         <div class="card_wrapper">
                                             <span>6</span>
-                                            <p>Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</p>
+                                            <p>Постройка сверхмощной радиостанции для передачи всему миру сенсационных
+                                                результатов</p>
                                         </div>
                                     </div>
                                 </div>
@@ -211,28 +212,30 @@
                                     <div class="card">
                                         <div class="card_wrapper">
                                             <span>7</span>
-                                            <p>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</p>
+                                            <p>Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых
+                                                самолётов и дирижаблей во все концы света, включая Лос-Анжелос
+                                                и Мельбурн</p>
                                         </div>
                                     </div>
                                 </div>
-                                
-                              
 
-                               
+
+
+
 
                             </div>
                         </div>
 
                     </div>
                     <div class="pagination">
-                        <div class="arrow-left"><svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                        <div class="arrow arrow-left"><svg width="10" height="18" viewBox="0 0 10 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8.07676 15.923L1.15369 8.9999L8.07676 2.07682" stroke="white"
                                     stroke-width="1.63636" stroke-linecap="square" />
                             </svg>
                         </div>
                         <div id="bottom"></div>
-                        <div class="arrow-right"><svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                        <div class="arrow arrow-right"><svg width="10" height="18" viewBox="0 0 10 18" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1.92324 2.0769L8.84631 8.99998L1.92324 15.9231" stroke="white"
                                     stroke-width="1.63636" stroke-linecap="square" />
@@ -249,9 +252,108 @@
         </div>
     </section>
 
+    <section class="participants">
+        <div class="container">
+            <div class="participants_wrapper">
+                <h1>Участники турнира</h1>
+
+                <div id="slider-container">
+                    <div id="top">
+
+                        <div id="frame">
+                            <div id="sliderr">
+                                <div class="slidee">
+                                    <div class="card">
+                                        <h2>Хозе-Рауль Капабланка</h2>
+                                        <p>Чемпион мира по шахматам</p>
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="slidee">
+                                    <div class="card">
+                                        <h2>Эммануил Ласкер</h2>
+                                        <p>Чемпион мира по шахматам</p>
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="slidee">
+                                    <div class="card">
+                                        <h2>Александр Алехин</h2>
+                                        <p>Чемпион мира по шахматам</p>
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+
+                                <div class="slidee">
+                                    <div class="card">
+                                        <h2>Арон Нимцович</h2>
+                                        <p>Чемпион мира по шахматам</p>
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+
+                                <div class="slidee">
+                                    <div class="card">
+                                        <h2>Рихард Рети</h2>
+                                        <p>Чемпион мира по шахматам</p>
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+                                <div class="slidee">
+                                    <div class="card">
+                                        <h2>Остап Бендер</h2>
+                                        <p>Гроссмейстер</p>
+                                        <a href="#">Подробнее</a>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="pagination">
+                        <div class="arrow arrow-leftt"><svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.07676 15.923L1.15369 8.9999L8.07676 2.07682" stroke="white"
+                                    stroke-width="1.63636" stroke-linecap="square" />
+                            </svg>
+                        </div>
+                        <div id="bottomm"></div>
+                        <div class="arrow arrow-rightt"><svg width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.92324 2.0769L8.84631 8.99998L1.92324 15.9231" stroke="white"
+                                    stroke-width="1.63636" stroke-linecap="square" />
+                            </svg>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="running_line">
+        <div class="running_line_wrapper">
+            <p>Дело помощи утопающим — дело рук самих утопающих! </p>
+            <p>Шахматы двигают вперед не только культуру, но и экономику!</p>
+            <p> Лед тронулся, господа присяжные заседатели!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».</p>
+        </div>
+    </footer>
+
 
     <script src="js/runningline.js"></script>
     <script src="js/stagescarousel.js"></script>
+    <script src="js/participantscarousel.js"></script>
 </body>
 
 </html>

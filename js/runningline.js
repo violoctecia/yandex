@@ -1,14 +1,3 @@
-// const runningLine = document.querySelector('.running_line');
-// const wrapper = runningLine.querySelector('.first_line');
-
-// function cloneWrapper() {
-//     const clone = wrapper.cloneNode(true);
-//     runningLine.appendChild(clone);
-//     clone.addEventListener('animationiteration', cloneWrapper); // Слушаем событие окончания анимации и клонируем элемент снова
-// }
-
-// cloneWrapper();
-
 const wrapper = document.querySelector(".running_line_wrapper");
 const paragraphs = wrapper.querySelectorAll("p");
 
@@ -21,3 +10,9 @@ paragraphs.forEach((paragraph, index) => {
   }
 });
 
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+  }
+}
